@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background: linear-gradient(to right,#ffecd2, #fcb69f);
+}
+
+#heading{
+  max-width: 600px;
+  max-height: 200px;
+  margin: auto;
+}
+
+#heading > div {
+  display: inline-block;
+}
+
+#start{
+  vertical-align: top;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 33%;
+  height: 100px;
+  font-size: 2em;
+  margin-left: 15%;
+  margin-top: 50px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+#puzzleBoard{
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: auto;
+  background: rgba(0,0,0,0.3);
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  grid-template-areas:
+    "A B C"
+    "D E F"
+    "G H I";
+
+  padding: 5px;
+
+}
+
+#originalIMG,
+.tile{
+  	background-image: url("https://source.unsplash.com/900x900/?animals");
+    background-size:cover;
+}
+
+.tile{
+  padding-top:100%;
+  background-size: 300%;
+}
+
+.tile:focus{
+  outline: none;
+}
+
+#originalIMG{
+  border: 2px solid white;
+  width: 200px;
+  height: 200px;
+}
+
+.tile-1{
+  background-position: top left;
+  grid-area: A;
+}
+
+.tile-2{
+  background-position: top;
+  grid-area: B;
+}
+
+.tile-3{
+  background-position: top right;
+  grid-area: C;
+}
+
+.tile-4{
+  background-position: left;
+  grid-area: D;
+}
+
+.tile-5{
+  background-position: center;
+  grid-area: E;
+}
+
+
+.tile-6{
+  background-position: right;
+  grid-area: F;
+}
+
+.tile-7{
+  background-position: bottom left;
+  grid-area: G;
+}
+
+.tile-8{
+  background-position: bottom;
+  grid-area: H;
+}
+
+.tile-empty{
+  background-position: bottom right;
+  background: transparent;
+  grid-area: I;
+}
+
+.movable {
+  cursor: pointer;
+  border: 2px solid #9ffcfa;
+}
